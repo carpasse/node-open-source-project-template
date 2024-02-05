@@ -1,6 +1,6 @@
 {
   "name": "@carpasse/node-open-source-project-template",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Repository template for new Open Source projects with NodeJS",
   "main": "./dist/cjs/index.js",
   "module": "./dist/cjs/index.mjs",

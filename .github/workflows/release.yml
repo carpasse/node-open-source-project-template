@@ -26,7 +26,7 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: License Check
-        run: npm run license-check"
+        run: npm run license-check
 
       - name: Build
         run: npm run build

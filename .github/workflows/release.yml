@@ -2,10 +2,7 @@ name: Release
 
 on:
   push:
-    branches:
-      - master
-      - beta
-      - alpha
+    branches: ['master', 'beta', 'alpha']
 
 jobs:
   release:
@@ -13,26 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci --ignore-scripts
-
-      - name: License Check
-        run: npm run license-check
-
-      - name: Build
-        run: npm run build
-
       - name: Semantic Release
-        env:
+        uses: carpasse/reusable-workflows/.github/workflows/release.yml@master
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release

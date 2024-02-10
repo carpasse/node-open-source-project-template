@@ -2,4 +2,4 @@ name: Validation
 on: [pull_request]
 jobs:
   validation:
-    uses: carpasse/reusable-workflows/.github/workflows/validation.yml@main
+    uses: carpasse/reusable-workflows/.github/workflows/validation.yml@master

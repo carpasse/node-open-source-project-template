@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: ['master', 'beta', 'alpha']
+    branches: ['main', 'beta', 'alpha']
 
 jobs:
   release:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Semantic Release
-        uses: carpasse/reusable-workflows/.github/workflows/release.yml@master
+        uses: carpasse/reusable-workflows/.github/workflows/release.yml@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

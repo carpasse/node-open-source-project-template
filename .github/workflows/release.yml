@@ -2,10 +2,10 @@ name: Release
 
 on:
   push:
-    branches: ['main', 'beta', 'alpha']
+    branches: ['master', 'beta', 'alpha']
 
 jobs:
   release:
-    uses: carpasse/reusable-workflows/.github/workflows/release.yml@main
+    uses: carpasse/reusable-workflows/.github/workflows/release.yml@master
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,8 +1,8 @@
 name: Validation
 on:
   pull_request:
-    branches: ['master', 'beta', 'alpha']
+    branches: ['main', 'beta', 'alpha']
 
 jobs:
   validation:
-    uses: carpasse/reusable-workflows/.github/workflows/validation.yml@master
+    uses: carpasse/reusable-workflows/.github/workflows/validation.yml@main

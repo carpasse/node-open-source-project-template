@@ -1,8 +1,5 @@
 name: Lint Commit Messages
-on:
-  pull_request:
-    branches: ['main', 'beta', 'alpha']
-
+on: [pull_request]
 jobs:
   commitlint:
     uses: carpasse/reusable-workflows/.github/workflows/lintCommitMessages.yml@main

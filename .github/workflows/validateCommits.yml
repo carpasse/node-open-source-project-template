@@ -1,5 +1,5 @@
 name: Validate commit messages
 on: [pull_request]
 jobs:
-  commitlint:
+  validation:
     uses: carpasse/reusable-workflows/.github/workflows/validateCommits.yml@master
